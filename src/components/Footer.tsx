@@ -1,7 +1,16 @@
 import { Key, Phone, MapPin, Mail, Heart } from "lucide-react";
 import { LOCATION, PHONE } from "../constantas/string";
+import { scrollToSection } from "../helper/handler";
+const phone = PHONE.slice(1).replace(/\-/g, "");
 
 const Footer = () => {
+  const handleWhatsAppClick = () => {
+    const message = encodeURIComponent(
+      "Halo Home Key, saya ingin bertanya tentang layanan duplikat kunci"
+    );
+    window.open(`https://wa.me/62${phone}?text=${message}`, "_blank");
+  };
+
   return (
     <footer className="bg-gray-900 text-white">
       {/* Main Footer */}
@@ -19,7 +28,6 @@ const Footer = () => {
               Solusi terpercaya untuk semua kebutuhan duplikat kunci Anda.
               Melayani dengan profesional sejak 2012.
             </p>
-          
           </div>
 
           {/* Services */}
@@ -53,17 +61,20 @@ const Footer = () => {
           <div className="space-y-4">
             <h4 className="text-xl font-semibold text-red-400">Info Penting</h4>
             <ul className="space-y-2 text-gray-400">
-              <li className="hover:text-white transition-colors cursor-pointer">
+              <li
+                onClick={() => scrollToSection("home")}
+                className="hover:text-white transition-colors cursor-pointer"
+              >
                 Tentang Kami
               </li>
-              <li className="hover:text-white transition-colors cursor-pointer">
+              <li
+                onClick={() => scrollToSection("features")}
+                className="hover:text-white transition-colors cursor-pointer"
+              >
                 Daftar Harga
               </li>
               <li className="hover:text-white transition-colors cursor-pointer">
                 Garansi
-              </li>
-              <li className="hover:text-white transition-colors cursor-pointer">
-                Testimoni
               </li>
             </ul>
           </div>
@@ -78,9 +89,7 @@ const Footer = () => {
               </div>
               <div className="flex items-start gap-3 text-gray-400">
                 <MapPin className="h-4 w-4 text-yellow-400 mt-1 flex-shrink-0" />
-                <span>
-                  {LOCATION}
-                </span>
+                <span>{LOCATION}</span>
               </div>
             </div>
 
@@ -88,7 +97,10 @@ const Footer = () => {
             <div className="pt-4">
               <p className="text-sm text-gray-400 mb-3">Ikuti Kami:</p>
               <div className="flex gap-3">
-                <div className="w-8 h-8 bg-green-600 rounded-full flex items-center justify-center cursor-pointer hover:bg-green-700 transition-colors">
+                <div
+                  onClick={handleWhatsAppClick}
+                  className="w-8 h-8 bg-green-600 rounded-full flex items-center justify-center cursor-pointer hover:bg-green-700 transition-colors"
+                >
                   <span className="text-xs font-bold">WA</span>
                 </div>
               </div>

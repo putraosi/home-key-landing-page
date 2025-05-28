@@ -74,7 +74,7 @@ const HeroSection = () => {
                   <Shield className="h-5 w-5 text-red-600" />
                 </div>
                 <div>
-                  <p className="font-semibold text-gray-800">100%</p>
+                  <p className="font-semibold text-gray-800">99.99%</p>
                   <p className="text-sm text-gray-600">Presisi</p>
                 </div>
               </div>
