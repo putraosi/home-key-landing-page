@@ -125,7 +125,8 @@ const HeroSection = () => {
             <div className="relative">
               {/* Main key illustration */}
               <div className="bg-gradient-to-br from-yellow-400 to-red-500 w-80 h-80 rounded-full flex items-center justify-center shadow-2xl animate-float">
-                <Key className="h-32 w-32 text-white" />
+                {/* <Key className="h-32 w-32 text-white" /> */}
+                <img src='/logo-xl.png' alt="logo" className="h-80 w-80 rounded-full" />
               </div>
 
               {/* Floating elements */}

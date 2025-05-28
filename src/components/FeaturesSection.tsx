@@ -17,7 +17,7 @@ const FeaturesSection = () => {
     {
       icon: Award,
       title: "Berpengalaman",
-      description: "Lebih dari 10 tahun melayani duplikat kunci di Jakarta",
+      description: "Lebih dari 10 tahun melayani duplikat kunci di Tangerang",
     },
     {
       icon: Users,

@@ -1,4 +1,5 @@
 import { Key, Phone, MapPin, Mail, Heart } from "lucide-react";
+import { LOCATION, PHONE } from "../constantas/string";
 
 const Footer = () => {
   return (
@@ -16,7 +17,7 @@ const Footer = () => {
             </div>
             <p className="text-gray-400 leading-relaxed">
               Solusi terpercaya untuk semua kebutuhan duplikat kunci Anda.
-              Melayani dengan profesional sejak 2014.
+              Melayani dengan profesional sejak 2012.
             </p>
           
           </div>
@@ -73,12 +74,12 @@ const Footer = () => {
             <div className="space-y-3">
               <div className="flex items-center gap-3 text-gray-400">
                 <Phone className="h-4 w-4 text-yellow-400" />
-                <span>0812-3456-7890</span>
+                <span>{PHONE}</span>
               </div>
               <div className="flex items-start gap-3 text-gray-400">
                 <MapPin className="h-4 w-4 text-yellow-400 mt-1 flex-shrink-0" />
                 <span>
-                  Jl. Merdeka No. 123, Jakarta Pusat, DKI Jakarta 10110
+                  {LOCATION}
                 </span>
               </div>
             </div>

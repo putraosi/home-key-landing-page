@@ -1,5 +1,5 @@
 import { Clock, MapPin, MessageCircle, Phone } from "lucide-react";
-import { PHONE } from "../constantas/string";
+import { LOCATION, PHONE } from "../constantas/string";
 import { Button } from "./ui/button";
 import { Card, CardContent } from "./ui/card";
 const phone = PHONE.slice(1).replace(/\-/g, "");
@@ -63,7 +63,7 @@ const ContactSection = () => {
                     </div>
                     <div>
                       <h3 className="font-semibold text-gray-800">Telepon</h3>
-                      <p className="text-gray-600">0812-3456-7890</p>
+                      <p className="text-gray-600">{PHONE}</p>
                     </div>
                   </div>
                 </CardContent>
@@ -81,7 +81,7 @@ const ContactSection = () => {
                     <div>
                       <h3 className="font-semibold text-gray-800">Alamat</h3>
                       <p className="text-gray-600">
-                        Jl. Merdeka No. 123, Jakarta Pusat
+                        {LOCATION}
                       </p>
                     </div>
                   </div>
@@ -114,7 +114,7 @@ const ContactSection = () => {
                 onClick={handleWhatsAppClick}
               >
                 <MessageCircle className="mr-2 h-5 w-5" />
-                WhatsApp: 0812-3456-7890
+                WhatsApp: {PHONE}
               </Button>
 
               <Button

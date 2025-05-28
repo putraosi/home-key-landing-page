@@ -18,7 +18,7 @@ const Header = () => {
   };
 
   return (
-    <header className="bg-gradient-to-r from-yellow-500 to-red-500 text-white shadow-lg">
+    <header className="bg-gradient-to-l from-yellow-500 to-red-500 text-white shadow-lg">
       {/* Top Info Bar */}
       <div className="bg-red-800 py-2">
         <div className="container mx-auto px-4">
@@ -54,8 +54,9 @@ const Header = () => {
             onClick={() => handleTo("home")}
             className="flex items-center gap-3 hover:scale-105 transition-transform duration-300"
           >
-            <div className="bg-white p-3 rounded-full animate-bounce-slow">
-              <Key className="h-8 w-8 text-yellow-500" />
+            <div className="bg-white rounded-full animate-bounce-slow">
+              {/* <Key className="h-8 w-8 text-yellow-500" /> */}
+              <img src='/logo-xl.png' alt="logo" className="h-12 w-12 rounded-full" />
             </div>
             <div className="items-start flex flex-col">
               <h1 className="text-2xl md:text-3xl font-bold">Home Key</h1>
@@ -64,30 +65,30 @@ const Header = () => {
           </button>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-6">
+          <nav className="hidden md:flex items-center gap-6 text-black100">
             <button
               onClick={() => {
                 handleTo("home");
               }}
-              className="hover:text-yellow-200 transition-colors"
+              className="hover:font-bold transition-colors"
             >
               Beranda
             </button>
             <button
               onClick={() => handleTo("services")}
-              className="hover:text-yellow-200 transition-colors"
+              className="hover:font-bold transition-colors"
             >
               Layanan
             </button>
             <button
               onClick={() => handleTo("features")}
-              className="hover:text-yellow-200 transition-colors"
+              className="hover:font-bold transition-colors"
             >
               Tentang
             </button>
             <button
               onClick={() => handleTo("contact")}
-              className="hover:text-yellow-200 transition-colors"
+              className="hover:font-bold transition-colors"
             >
               Kontak
             </button>
